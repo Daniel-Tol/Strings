@@ -23,8 +23,8 @@ scorers = scorer_name_0 + " " + str(goal_0) + ", " + scorer_name_1 + " " + str(g
 print(scorers)
 
 # 4
-report = scorer_name_0 + " scored in the " + str(goal_0) + "nd minute" + "\n" + scorer_name_1 + " scored in the " + str(goal_1) + "th minute"
-print(report)
+report = f"{scorer_name_0} scored in the {str(goal_0)}nd minute\n{scorer_name_1} scored in the {str(goal_1)}th minute"
+print (report)
 
 # Part 2
 
@@ -33,12 +33,12 @@ player = "Hans van Breukelen"
 print(player)
 
 # 2
-find_last_name = player.find("van Breukelen")
-first_name = player[:find_last_name - 1]
+find_last_name = player.find(" ")
+first_name = player[:find_last_name]
 print(first_name)
 
 # 3
-last_name = player[find_last_name:]
+last_name = player[find_last_name+1:]
 last_name_len = len(last_name)
 print(last_name_len)
 
@@ -53,5 +53,5 @@ chant = chant_space[:-1]
 print(chant)
 
 # 6 
-good_chant = chant[-1:] != " "
+good_chant = chant[-1] != " "
 print(good_chant)
